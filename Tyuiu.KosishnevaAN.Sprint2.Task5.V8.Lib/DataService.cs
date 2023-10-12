@@ -11,61 +11,47 @@ namespace Tyuiu.KosishnevaAN.Sprint2.Task5.V8.Lib
     {
         public string FindDateOfPreviousDay(int m, int n)
         {
-         
-           switch (m)
+            string res;
+            switch (n)
             {
                 case 1:
-                    m = 1;
+                    switch (m)
+                    {
+                        case 1:
+                            n = 31;
+                            m = 12;
+                            break;
+                        default:
+                            m = m - 1;
+                            switch (m)
+                            {
+                                case 1:
+                                case 3:
+                                case 5:
+                                case 7:
+                                case 8:
+                                case 10:
+                                    n = 31;
+                                    break;
+                                case 2:
+                                    n = 28;
+                                    break;
+                                default:
+                                    n = 30;
+                                    break;
+                            }
+                            break;
+                    }
+                    break;
+                default:
                     n = n - 1;
                     break;
-                case 2:
-                    m = 2;
-                    n = n - 1;
-                    break;
-                case 3:
-                    m = 3;
-                    n = n - 1;
-                    break;
-                case 4:
-                    m = 4;
-                    n = n - 1;
-                    break;
-                case 5:
-                    m = 5;
-                    n = n - 1;
-                    break;
-                case 6:
-                    m = 6;
-                    n = n - 1;
-                    break;
-                case 7:
-                    m = 7;
-                    n = n - 1;
-                    break;
-                case 8:
-                    m = 8;
-                    n = n - 1;
-                    break;
-                case 9:
-                    m = 9;
-                    n = n - 1;
-                    break;
-                case 10:
-                    m = 10;
-                    n = n - 1;
-                    break;
-                case 11:
-                    m = 11;
-                    n = n - 1;
-                    break;
-                case 12:
-                    m = 12;
-                    n = n - 1;
-                    break;
-                    
-
             }
-            return ;
+            res = ($"{n}.{m}");
+            return res;
+
         }
     }
 }
+    
+
