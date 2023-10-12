@@ -41,7 +41,7 @@ namespace Tyuiu.KosishnevaAN.Sprint2.Task5.V8
             }
             else
             {
-                res = "Предыдущая дата:" + ds.FindDateOfPreviousDay(n, m);
+                res = "Предыдущая дата:" + ds.FindDateOfPreviousDay(m, n);
             }
 
             Console.WriteLine("*************************************************************************");
